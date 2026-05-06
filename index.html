@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light & Matter: 8th Grade Science</title>
+    <style>
+        :root {
+            --bg-color: #f0f4f8;
+            --text-color: #2d3436;
+            --accent-color: #0984e3;
+            --box-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            background: var(--accent-color);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .lesson-card {
+            background: var(--box-bg);
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 10px solid var(--accent-color);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: var(--accent-color);
+            font-size: 1.8rem;
+        }
+
+        .vocab-word {
+            font-weight: bold;
+            background-color: #fff3cd;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+
+        .fact-box {
+            background-color: #e1f5fe;
+            padding: 15px;
+            border-radius: 5px;
+            font-style: italic;
+        }
+
+        button {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background-color: #74b9ff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>How Light Moves</h1>
+        <p>NJ SLRS: MS-PS4-2 | Exploring Light Waves</p>
+    </header>
+
+    <section class="lesson-card">
+        <h2>1. Reflection (The Bouncers)</h2>
+        <p>When light hits a smooth surface like a mirror, it bounces off. This is called <span class="vocab-word">Reflection</span>.</p>
+        <div class="fact-box">
+            <strong>Key Rule:</strong> The angle it hits is the same as the angle it leaves!
+        </div>
+    </section>
+
+    <section class="lesson-card">
+        <h2>2. Refraction (The Speed Jumpers)</h2>
+        <p>Light changes speed when it moves from one <span class="vocab-word">medium</span> (material) to another—like going from air into water.</p>
+        <p>This change in speed makes the light <strong>bend</strong>. This is <span class="vocab-word">Refraction</span>.</p>
+        <p><em>Think of a straw looking "broken" in a glass of water!</em></p>
+    </section>
+
+    <section class="lesson-card">
+        <h2>3. Absorption (The Sponges)</h2>
+        <p>Sometimes, a material doesn't let light through or bounce off. It takes the energy in! This is <span class="vocab-word">Absorption</span>.</p>
+        <p>Darker colors absorb more light and turn it into <strong>heat</strong>.</p>
+    </section>
+
+    <section class="lesson-card" style="text-align: center;">
+        <h2>Check Your Knowledge</h2>
+        <p id="quiz-text">What happens to light when it hits a mirror?</p>
+        <button onclick="checkAnswer()">Show Answer</button>
+        <p id="answer" style="display:none; margin-top:15px; font-weight:bold; color: green;">It Reflects (Bounces)!</p>
+    </section>
+</div>
+
+<script>
+    function checkAnswer() {
+        var x = document.getElementById("answer");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
